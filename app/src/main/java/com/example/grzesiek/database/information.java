@@ -9,29 +9,42 @@ public class information {
     double _weight;
     double _targetWeight;
     int _age;
+    int _year;
+
 
     //empty constructor
-    public information(){
-
+    public information() {
     }
 
     //constructors
-    public information(int id, String name, int height, double weight, double targetWeight, int age){
+    //all main information
+    public information(int id, String name, int height, double weight, double targetWeight, int age, int year) {
         this._id = id;
         this._name = name;
         this._height = height;
         this._weight = weight;
         this._targetWeight = targetWeight;
         this._age = age;
-    }
+        this._year = year;
 
-    public information(String name, int height, double weight, double targetWeight, int age){
+    }
+    //main information
+    public information(String name, int height, double weight, double targetWeight, int age, int year) {
         this._name = name;
         this._height = height;
         this._weight = weight;
         this._targetWeight = targetWeight;
         this._age = age;
+        this._year = year;
+
     }
+    //weight information
+    public information(int year){
+        this._year = year;
+    }
+
+
+
 
     //getters and setters
     //id
@@ -86,5 +99,14 @@ public class information {
 
     public void setAge(int age) {
         this._age = age;
+    }
+
+    //year
+    public int getYear() {
+        return this._year;
+    }
+
+    public void setYear(int year) {
+        this._year = year;
     }
 }
